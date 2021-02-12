@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+  <com.google.android.material.textfield.TextInputEditText
+      android:layout_width="match_parent"
+      android:id="@+id/edtModel"
+      android:hint="car Model"
+      android:gravity="center"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_height="wrap_content"/>
+
+  <com.google.android.material.textfield.TextInputEditText
+      android:layout_width="match_parent"
+      android:id="@+id/edtPrice"
+      android:hint="car Price"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtModel"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:gravity="center"
+      android:layout_height="wrap_content"/>
+
+  <Button
+      android:layout_width="match_parent"
+      android:id="@+id/btnAddcar"
+      android:text="add car"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtPrice"
+      android:layout_marginTop="10dp"
+      android:layout_height="wrap_content"/>
+
+  <Button
+      android:layout_width="match_parent"
+      android:id="@+id/btnGetcar"
+      android:text="get car"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnAddcar"
+      android:layout_height="wrap_content"/>
+
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:id="@+id/recycleView"
+     app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnGetcar"
+      android:layout_height="0dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
